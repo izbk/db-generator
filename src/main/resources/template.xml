@@ -69,10 +69,32 @@
                         xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
                         xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
                 <w:body>
+               		<w:p>
+						<w:pPr>
+							<w:pStyle w:val="1" />
+							<w:numPr>
+								<w:numId w:val="0" />
+							</w:numPr>
+							<w:ind w:left="2127" w:leftChars="0" />
+							<w:jc w:val="both" />
+							<w:rPr>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN" />
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" />
+								<w:lang w:val="en-US" w:eastAsia="zh-CN" />
+							</w:rPr>
+							<w:t>数据库设计文档</w:t>
+						</w:r>
+						<w:bookmarkStart w:id="0" w:name="_GoBack" />
+						<w:bookmarkEnd w:id="0" />
+					</w:p>
                     <#list table as t>
                     <w:p w:rsidR="00175B3F" w:rsidRDefault="004C3BF7" w:rsidP="007B11EA">
                         <w:pPr>
-                            <w:pStyle w:val="4"/>
+                            <w:pStyle w:val="2"/>
                             <w:ind w:left="1074" w:right="210"/>
                             <w:rPr>
                                 <w:lang w:eastAsia="zh-CN"/>
@@ -351,7 +373,7 @@
                                         <w:rPr>
                                             <w:rFonts w:hint="eastAsia"/>
                                         </w:rPr>
-                                        <w:t>默认值</w:t>
+                                        <w:t>是否为空</w:t>
                                     </w:r>
                                 </w:p>
                             </w:tc>
@@ -429,15 +451,15 @@
                                         <w:t>${c.DATA_TYPE}</w:t>
                                     </w:r>
                                     <w:proofErr w:type="gramEnd"/>
-                                    <w:r>
+                                <!--     <w:r>
                                         <w:t>(</w:t>
-                                    </w:r>
+                                    </w:r> -->
                                     <w:r>
                                         <w:t>${c.DATA_LENGTH}</w:t>
                                     </w:r>
-                                    <w:r w:rsidR="00175B3F" w:rsidRPr="00FA6EAC">
+                                   <!--  <w:r w:rsidR="00175B3F" w:rsidRPr="00FA6EAC">
                                         <w:t>)</w:t>
-                                    </w:r>
+                                    </w:r> -->
                                 </w:p>
                             </w:tc>
                             <w:tc>
@@ -448,7 +470,7 @@
                                 </w:tcPr>
                                 <w:p w:rsidR="00175B3F" w:rsidRDefault="001E788A" w:rsidP="00CF755D">
                                     <w:r>
-                                        <w:t>${c.DATA_DEFAULT}</w:t>
+                                        <w:t>${c.NULLABLE}</w:t>
                                     </w:r>
                                 </w:p>
                             </w:tc>
